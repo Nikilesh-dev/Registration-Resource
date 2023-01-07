@@ -1,0 +1,63 @@
+﻿<Window x:Class="Registration2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registration2"
+         xmlns:lang="clr-namespace:Registration2.Property"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\nikilesh\Downloads\Reg.webp"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="{x:Static lang:Resource1.Heading}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White"></Label>
+        <Label  Content="{x:Static lang:Resource1.Name}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="txtname" VerticalAlignment="Center" Width="250" Height="40" VerticalContentAlignment="Center" FontSize="20" FontWeight="Light"></TextBox>
+            <Label Content="{x:Static lang:Resource1.Name_error}" x:Name="lblname" VerticalContentAlignment="Center" Foreground="Red" FontSize="15"  Visibility="Hidden" FontWeight="Bold"></Label>
+        </StackPanel>
+        <Label  Content="{x:Static lang:Resource1.email}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+            <TextBox x:Name="txtmail" VerticalAlignment="Center" Width="250" Height="40" VerticalContentAlignment="Center" FontSize="20" FontWeight="Light"></TextBox>
+            <Label Content="{x:Static lang:Resource1.email_error}" x:Name="lblmail" VerticalContentAlignment="Center" Foreground="Red" FontSize="15" Visibility="Hidden" FontWeight="Bold"></Label>
+        </StackPanel>
+        <Label  Content="{x:Static lang:Resource1.Gender}" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+            <RadioButton Content="{x:Static lang:Resource1.Male}" Checked="RadioButton_Checked" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,0,0" FontSize="15" FontWeight="Medium"  Foreground="White"></RadioButton>
+            <RadioButton Content="{x:Static lang:Resource1.Female}" Checked="RadioButton_Checked" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="30,0,0,0" FontSize="15" FontWeight="Medium"  Foreground="White"></RadioButton>
+        </StackPanel>
+        <Label  Content="{x:Static lang:Resource1.User}" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+            <TextBox x:Name="txtUser" VerticalAlignment="Center" Width="250" Height="40" VerticalContentAlignment="Center" FontSize="20" FontWeight="Light"></TextBox>
+            <Label Content="{x:Static lang:Resource1.User_error}" x:Name="lblname1" VerticalContentAlignment="Center" Foreground="Red" FontSize="15" Visibility="Hidden" FontWeight="Bold"></Label>
+        </StackPanel>
+        <Label  Content="{x:Static lang:Resource1.Password}" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
+            <TextBox x:Name="txtPass" VerticalAlignment="Center" Width="250" Height="40" VerticalContentAlignment="Center" FontSize="20" FontWeight="Light"></TextBox>
+           
+        </StackPanel>
+        <Label  Content="{x:Static lang:Resource1.Password2}" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" FontWeight="Bold"  Foreground="White"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="1">
+            <TextBox x:Name="txtPass2" VerticalAlignment="Center" Width="250" Height="40" VerticalContentAlignment="Center" FontSize="20" FontWeight="Light"></TextBox>
+            <Label Content="{x:Static lang:Resource1.Pass_error}" x:Name="lblPass2" VerticalContentAlignment="Center" Foreground="Red" FontSize="15" Visibility="Hidden" FontWeight="Bold"></Label>
+        </StackPanel>
+        <Button Content="{x:Static lang:Resource1.Button}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Click="Button_Click" Height="35" FontSize="19" FontWeight="Medium"></Button>
+    </Grid>
+</Window>
